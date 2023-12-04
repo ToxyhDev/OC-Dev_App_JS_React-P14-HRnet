@@ -18,17 +18,23 @@
     */
 
 // => Colors -------------------------------------------------
-
-$color-primary: #42b983;
+$color-primary: #e97316;
 $color-secondary: #12002b;
-$color-tertiary: #00bc77;
+$color-tertiary: #e9d116;
 
-$color-surface: #ffffff;
+$color-surface: #fbfbfb;
 $color-surface-container: #fbfbfb;
-$color-surface-dim: #020203;
+$color-surface-dim: #371b05;
+
+$color-gradient: linear-gradient(
+  117deg,
+  $color-primary 0%,
+  $color-tertiary 100%
+);
 
 // => Font Family -------------------------------------------------
 
+$fontFamilyTitle: 'Rochester', cursive;
 $fontFamily: 'Roboto', sans-serif;
 
 // => Font Size -------------------------------------------------

@@ -1,0 +1,20 @@
+@use '../../global';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 16px 0;
+  gap: 32px;
+}
+
+.title {
+  margin: 0;
+  font-family: global.$fontFamilyTitle;
+  font-size: 32px;
+  font-weight: 900;
+  background: global.$color-gradient;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

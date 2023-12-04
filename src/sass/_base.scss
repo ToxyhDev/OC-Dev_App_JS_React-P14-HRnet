@@ -18,10 +18,12 @@ html {
 
 body {
   color: variables.$color-secondary;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
 
-  background-color: variables.$color-surface;
+  background: variables.$color-gradient;
 }
 
 ul,
@@ -57,9 +59,13 @@ figure {
 }
 #root {
   width: 100%;
+  max-width: 425px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: variables.$color-surface;
+  margin: 16px 0;
+  border-radius: variables.$borderRaduis-md;
 }
 
 /* clears the ‘X’ from Internet Explorer */
