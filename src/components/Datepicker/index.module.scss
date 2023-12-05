@@ -1,0 +1,37 @@
+@use '../../global.scss';
+.date {
+  display: none;
+  width: fit-content;
+  border: 1px solid grey;
+  border-radius: global.$borderRaduis-md;
+  padding: 8px;
+  font-size: 8px;
+
+  &.open {
+    display: flex;
+  }
+}
+
+.chooseDate {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.select {
+  font-size: 8px;
+}
+
+.save {
+  font-size: 8px;
+  padding: 2px 5px;
+  border: 1.5px solid global.$color-primary;
+  border-radius: global.$borderRaduis-md;
+  color: global.$color-primary;
+  font-weight: 700;
+  margin-left: 16px;
+  &:hover {
+    color: global.$color-surface;
+    background-color: global.$color-primary;
+  }
+}

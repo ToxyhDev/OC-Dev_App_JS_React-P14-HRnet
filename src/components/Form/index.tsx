@@ -1,6 +1,7 @@
 import styles from './index.module.scss'
 import Dropdown from '../Dropdown'
 import states from './statesList'
+import Datepicker from '../Datepicker'
 
 export default function Form() {
   return (
@@ -20,7 +21,7 @@ export default function Form() {
         <label className={styles.label} htmlFor="date-of-birth">
           Date of Birth :
         </label>
-        <input className={styles.input} id="date-of-birth" type="text" />
+        <Datepicker style={styles.input} name="date-of-birth" />
       </fieldset>
       <fieldset className={styles.fieldset}>
         <legend>Address</legend>
@@ -39,14 +40,11 @@ export default function Form() {
           State :
         </label>
         <Dropdown name="state">
-          {states.map((element, index) => {
-            let counter = index
-            return (
-              <option key={counter} value={element.name}>
-                {element.name}
-              </option>
-            )
-          })}
+          {states.map((element, index) => (
+            <option key={index + 1} value={element.name}>
+              {element.name}
+            </option>
+          ))}
         </Dropdown>
 
         <label className={styles.label} htmlFor="zip-code">
@@ -60,7 +58,7 @@ export default function Form() {
         <label className={styles.label} htmlFor="start-date">
           Start Date :
         </label>
-        <input className={styles.input} id="start-date" type="text" />
+        <Datepicker style={styles.input} name="start-date" />
 
         <label className={styles.label} htmlFor="department">
           Department :
