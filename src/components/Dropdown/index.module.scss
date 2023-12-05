@@ -1,0 +1,10 @@
+@use '../../global.scss';
+
+.dropdown {
+  border-radius: 1000px;
+  border: 1.5px solid global.$color-secondary;
+  padding: 0 8px;
+  font-size: 10px;
+  max-width: 70%;
+  height: 24px;
+}

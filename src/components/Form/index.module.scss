@@ -1,0 +1,59 @@
+@use '../../global';
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px 8px;
+}
+
+.fieldset {
+  border: none;
+  border-top: 1.5px solid global.$color-primary;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+
+  & legend {
+    color: global.$color-primary;
+    font-size: 14px;
+    padding: 0 8px;
+  }
+}
+
+.label {
+  margin-left: 16px;
+  text-decoration: underline global.$color-primary;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.input {
+  border-radius: 1000px;
+  border: 1.5px solid global.$color-secondary;
+  padding: 0 8px;
+  font-size: 10px;
+  max-width: 70%;
+  height: 24px;
+}
+
+.button {
+  margin-left: auto;
+  border: 2px solid global.$color-primary;
+  border-radius: 100px;
+  width: 30%;
+  height: 24px;
+  background-color: global.$color-primary;
+  color: global.$color-surface;
+  font-weight: 400;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    color: global.$color-primary;
+  }
+}
