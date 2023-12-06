@@ -1,0 +1,56 @@
+@use '../../global.scss';
+.modal {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modalContent {
+  height: 80%;
+  width: 50%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 16px;
+  background-color: global.$color-surface-container;
+  border-radius: global.$borderRaduis-lg;
+}
+
+.text {
+  font-size: 32px;
+  font-family: global.$fontFamilyTitle;
+  font-weight: 700;
+  font-style: italic;
+  background: global.$color-gradient;
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  border: 2px solid global.$color-primary;
+  border-radius: 100px;
+  width: 30%;
+  height: 30px;
+  background-color: global.$color-primary;
+  color: global.$color-surface;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+    color: global.$color-primary;
+  }
+}

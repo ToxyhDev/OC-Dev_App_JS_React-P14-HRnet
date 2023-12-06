@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react'
+import { LegacyRef, useEffect, useState } from 'react'
 import styles from './index.module.scss'
 
 interface IDatepickerProps {
   style: string
   name: string
+  refHook: LegacyRef<HTMLInputElement> | undefined
 }
 
-export default function Datepicker({ style, name }: IDatepickerProps) {
+export default function Datepicker({ style, name, refHook }: IDatepickerProps) {
   const [open, setOpen] = useState(false)
   const [day, setDay] = useState('')
   const [month, setMonth] = useState('')
@@ -64,15 +65,16 @@ export default function Datepicker({ style, name }: IDatepickerProps) {
         type="text"
         onClick={(e) => handleClick(e)}
         value={date}
+        ref={refHook}
         readOnly
       />
       <div className={`${styles.date} ${open ? styles.open : ''}`}>
         {/* DAY */}
         <div className={styles.chooseDate}>
-          <label htmlFor="day">Day</label>
+          <label htmlFor={`${name}-day`}>Day</label>
           <select
-            name="day"
-            id="day"
+            name={`${name}-day`}
+            id={`${name}-day`}
             className={styles.select}
             onChange={(e) => setDay(e.target.value)}
           >
@@ -85,10 +87,10 @@ export default function Datepicker({ style, name }: IDatepickerProps) {
 
         {/* MONTH */}
         <div className={styles.chooseDate}>
-          <label htmlFor="month">Month</label>
+          <label htmlFor={`${name}-month`}>Month</label>
           <select
-            name="month"
-            id="month"
+            name={`${name}-month`}
+            id={`${name}-month`}
             className={styles.select}
             onChange={(e) => setMonth(e.target.value)}
           >
@@ -104,10 +106,10 @@ export default function Datepicker({ style, name }: IDatepickerProps) {
 
         {/* YEAR */}
         <div className={styles.chooseDate}>
-          <label htmlFor="year">Year</label>
+          <label htmlFor={`${name}-year`}>Year</label>
           <select
-            name="year"
-            id="year"
+            name={`${name}-year`}
+            id={`${name}-year`}
             className={styles.select}
             onChange={(e) => setYear(e.target.value)}
           >
