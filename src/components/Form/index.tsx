@@ -31,6 +31,7 @@ export default function Form() {
     setTimeout(() => setShowModal(false), 1000)
   }
   const getDataInput = () => {
+    console.log(dateOfBirthRef.current?.value)
     const data: IEmployee = {
       firstName: firstNameRef.current?.value,
       lastName: lastNameRef.current?.value,
@@ -45,6 +46,7 @@ export default function Form() {
     dispatch(formSlice.actions.addData(data))
     console.log('Data:', data)
   }
+
   return (
     <>
       <form className={styles.formContainer} onSubmit={(e) => handleSubmit(e)}>
@@ -102,7 +104,7 @@ export default function Form() {
           </label>
           <Dropdown name="state" refHook={stateRef}>
             {states.map((element) => (
-              <option key={element.abbreviation} value={element.name}>
+              <option key={element.abbreviation} value={element.abbreviation}>
                 {element.name}
               </option>
             ))}

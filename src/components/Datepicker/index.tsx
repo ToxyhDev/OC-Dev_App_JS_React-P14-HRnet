@@ -7,7 +7,11 @@ interface IDatepickerProps {
   refHook: LegacyRef<HTMLInputElement> | undefined
 }
 
-export default function Datepicker({ style, name, refHook }: IDatepickerProps) {
+export default function Datepicker({
+  style,
+  name,
+  refHook,
+}: Readonly<IDatepickerProps>) {
   const [open, setOpen] = useState(false)
   const [day, setDay] = useState('')
   const [month, setMonth] = useState('')
@@ -96,8 +100,8 @@ export default function Datepicker({ style, name, refHook }: IDatepickerProps) {
           >
             <option value=""></option>
 
-            {monthsArray.map((month, index) => (
-              <option key={index + 1} value={month}>
+            {monthsArray.map((month) => (
+              <option key={month} value={month}>
                 {month}
               </option>
             ))}
