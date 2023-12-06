@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './global.scss'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
+import { store } from './app/store.ts'
 import Employees from './pages/Employees/index.tsx'
 import Home from './pages/Home/index.tsx'
 
@@ -25,9 +26,9 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <Provider store={store}>
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-  // </Provider>
+  <Provider store={store}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </Provider>
 )

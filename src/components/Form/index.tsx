@@ -4,8 +4,13 @@ import states from './statesList'
 import Datepicker from '../Datepicker'
 import Modal from '../Modal'
 import { useRef, FormEvent, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { formSlice } from './formSlice'
+import { IEmployee } from '../../types'
 
 export default function Form() {
+  const dispatch = useDispatch()
+
   const [showModal, setShowModal] = useState(false)
 
   const firstNameRef = useRef<HTMLInputElement>(null)
@@ -26,7 +31,7 @@ export default function Form() {
     setTimeout(() => setShowModal(false), 1000)
   }
   const getDataInput = () => {
-    const data = {
+    const data: IEmployee = {
       firstName: firstNameRef.current?.value,
       lastName: lastNameRef.current?.value,
       dateOfBirth: dateOfBirthRef.current?.value,
@@ -37,7 +42,7 @@ export default function Form() {
       startDate: startDateRef.current?.value,
       department: departmentRef.current?.value,
     }
-
+    dispatch(formSlice.actions.addData(data))
     console.log('Data:', data)
   }
   return (
@@ -96,8 +101,8 @@ export default function Form() {
             State :
           </label>
           <Dropdown name="state" refHook={stateRef}>
-            {states.map((element, index) => (
-              <option key={index + 1} value={element.name}>
+            {states.map((element) => (
+              <option key={element.abbreviation} value={element.name}>
                 {element.name}
               </option>
             ))}

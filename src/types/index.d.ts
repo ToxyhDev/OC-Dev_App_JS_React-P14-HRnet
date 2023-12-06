@@ -1,3 +1,4 @@
 import { IChildrenProps } from './childrenProps'
+import { IStateEmployeeData, IEmployeeData, IEmployee } from './state'
 
-export { IChildrenProps }
+export { IChildrenProps, IStateEmployeeData, IEmployeeData, IEmployee }
