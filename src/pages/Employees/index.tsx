@@ -48,7 +48,7 @@ export default function Employees() {
         styleEntriesFooter={styles.entriesFooter}
         stylePrevNext={styles.btnPrevNext}
         stylePage={styles.btnPage}
-        filter={true}
+        sort={true}
         searchBar={true}
       ></DataTable>
     </main>

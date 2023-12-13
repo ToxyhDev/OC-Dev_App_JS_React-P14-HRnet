@@ -19,8 +19,9 @@
 
   & legend {
     color: global.$color-primary;
-    font-size: 14px;
+    // font-size: 14px;
     padding: 0 8px;
+    @include global.fontSize-paragraph2;
   }
 }
 
@@ -28,8 +29,8 @@
   margin-left: 16px;
   text-decoration: underline global.$color-primary;
   font-style: italic;
-  font-size: 12px;
   font-weight: 300;
+  @include global.fontSize-paragraph3;
 }
 
 .input {
@@ -37,9 +38,9 @@
   border: 1.5px solid global.$color-secondary;
   background-color: global.$color-surface;
   padding: 0 8px;
-  font-size: 10px;
+  @include global.fontSize-paragraph3;
   max-width: 70%;
-  height: 24px;
+  height: 32px;
   position: relative;
 }
 
@@ -53,6 +54,7 @@
   color: global.$color-surface;
   font-weight: 400;
   transition: all 200ms ease-in-out;
+  @include global.fontSize-paragraph3;
 
   &:hover {
     background-color: transparent;

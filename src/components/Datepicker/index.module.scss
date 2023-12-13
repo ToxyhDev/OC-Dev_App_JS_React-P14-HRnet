@@ -5,7 +5,7 @@
   border: 1px solid grey;
   border-radius: global.$borderRaduis-md;
   padding: 8px;
-  font-size: 8px;
+  @include global.fontSize-paragraph3;
 
   &.open {
     display: flex;
@@ -19,11 +19,11 @@
 }
 
 .select {
-  font-size: 8px;
+  @include global.fontSize-paragraph3;
 }
 
 .save {
-  font-size: 8px;
+  @include global.fontSize-paragraph3;
   padding: 2px 5px;
   border: 1.5px solid global.$color-primary;
   border-radius: global.$borderRaduis-md;

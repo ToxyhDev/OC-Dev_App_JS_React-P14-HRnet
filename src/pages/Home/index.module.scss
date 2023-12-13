@@ -1,3 +1,5 @@
+@use '../../global';
+
 .main {
   height: 100%;
   width: 100%;
@@ -8,7 +10,7 @@
 }
 
 .title {
-  font-size: 18px;
+  @include global.fontSize-paragraph;
   font-weight: 500;
   margin: 0;
 }

@@ -10,9 +10,7 @@
 
 .title {
   margin: 0;
-  font-family: global.$fontFamilyTitle;
-  font-size: 32px;
-  font-weight: 900;
+  @include global.fontSize-title;
   background: global.$color-gradient;
   background-size: 100%;
   background-clip: text;

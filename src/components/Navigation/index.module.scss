@@ -7,7 +7,7 @@
 
 .link {
   width: 100%;
-  font-size: 12px;
+  @include global.fontSize-paragraph2;
   font-weight: 400;
   padding-bottom: 16px;
   border-bottom: 2px solid #f2f2f2;
