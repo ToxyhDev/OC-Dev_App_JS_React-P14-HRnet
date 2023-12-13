@@ -3,7 +3,7 @@ export interface IStateEmployeeData {
 }
 
 export interface IEmployeeData {
-  data?: IEmployee[]
+  data: IEmployee[]
 }
 
 export interface IEmployee {
