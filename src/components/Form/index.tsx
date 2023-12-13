@@ -26,12 +26,10 @@ export default function Form() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     getDataInput()
-    console.log('submit')
     setShowModal(true)
     setTimeout(() => setShowModal(false), 1000)
   }
   const getDataInput = () => {
-    console.log(dateOfBirthRef.current?.value)
     const data: IEmployee = {
       firstName: firstNameRef.current?.value,
       lastName: lastNameRef.current?.value,
@@ -44,7 +42,6 @@ export default function Form() {
       department: departmentRef.current?.value,
     }
     dispatch(formSlice.actions.addData(data))
-    console.log('Data:', data)
   }
 
   return (

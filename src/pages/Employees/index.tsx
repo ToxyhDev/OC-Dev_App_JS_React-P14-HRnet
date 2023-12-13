@@ -6,7 +6,6 @@ import { IEmployee } from '../../types'
 
 export default function Employees() {
   const dataEmployees = useSelector(getData)
-  console.log(dataEmployees.data)
   const customColumnOrder = [
     'firstName',
     'lastName',
